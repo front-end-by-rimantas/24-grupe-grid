@@ -1,0 +1,33 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  grid-template-areas:
+    'second second'
+    'third first';
+}
+
+div {
+  padding: 20px;
+  background-color: lightblue;
+}
+
+.pirmas {
+  grid-area: first;
+}
+
+.antras {
+  grid-area: second;
+}
+
+.trecias {
+  grid-area: third;
+}
+
+@media (min-width: 400px) {
+  body {
+    grid-template-areas:
+      'first third'
+      'second second';
+  }
+}
